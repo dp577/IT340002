@@ -1,0 +1,23 @@
+sudo apt-get install postfix mailutils -y
+sudo nano /etc/postfix/sasl_passwd
+sudo chmod 600 /etc/postfix/sasl_passwd
+sudo nano /etc/postfix/main.cf
+sudo postmap /etc/postfix/sasl_passwd
+sudo nano /etc/aliases
+sudo ufw allow 587
+sudo systemctl restart postfix
+echo "Postfix email" | mail -s "Email from `hostname`" root
+echo "Postfix email" | mail -s "Email from `hostname`" test.divya01@gmail.com
+echo "Postfix email" | mail -s "Email from `hostname`" root
+sudo nano /etc/aliases
+sudo newaliases
+echo "Postfix email" | mail -s "Email from `hostname`" root
+echo "Postfix email" | mail -s "Email from `hostname`" dp577@njit.edu
+echo "Postfix email" | mail -s "Email from `hostname`" root
+echo "Postfix email" | mail -s "Email from `hostname`" dp577@njit.edu
+echo "Postfix email" | mail -s "Email from `hostname`" root
+echo "Postfix email" | mail -s "Email from `hostname`" divyapatel20@gmail.com
+History > myhistory.txt
+history > myhistory.txt
+history 
+vagrant@vagrant:~$ 
