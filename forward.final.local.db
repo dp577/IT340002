@@ -1,0 +1,37 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL    604800
+@ IN SOA ns1.final.local. root.final.local. (
+3 ; Serial
+604800 ; Refresh
+86400 ; Retry
+2419200 ; Expire
+604800 ) ; Negative Cache TTL
+;
+;@ IN NS localhost.
+;@ IN A 127.0.0.1
+;@ IN AAAA ::1
+
+;Name Server Information
+
+@ IN NS ns1.final.local.
+
+;IP address of Name Server
+
+ns1 IN A 192.168.0.98
+
+;Mail Exchanger
+
+final.local. IN MX 10 mail.final.local.
+
+;A – Record HostName To Ip Address
+
+www IN A 192.168.0.99
+mail IN A 192.168.0.99
+
+;CNAME record
+
+ftp IN CNAME www.final.local.
+
+
