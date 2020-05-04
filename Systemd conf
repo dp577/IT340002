@@ -1,0 +1,10 @@
+sudo nano /etc/apache2/apache2.conf
+sudo systemctl status apache2
+sudo nano  /etc/systemd/system/apache2.service
+sudo systemctl status apache2
+sudo systemctl daemon-reload
+sudo systemctl enable apache2
+sudo nano /lib/systemd/system/apache2.service
+sudo systemctl daemon-reload
+sudo systemctl enable
+sudo systemctl status apache2
